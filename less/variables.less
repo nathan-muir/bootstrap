@@ -44,7 +44,7 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "Open Sans", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -68,7 +68,7 @@
 
 //** By default, this inherits from the `<body>`.
 @headings-font-family:    inherit;
-@headings-font-weight:    500;
+@headings-font-weight:    600;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
 
@@ -144,31 +144,57 @@
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-@btn-font-weight:                normal;
+@btn-font-weight:                500;
 
-@btn-default-color:              #333;
-@btn-default-bg:                 #fff;
-@btn-default-border:             #ccc;
+@btn-default-color:              #666;
+@btn-default-bg:                 #e9e9e9;
+@btn-default-border:             #cacaca;
+@btn-default-hover-color:        @btn-default-color;
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
 @btn-primary-border:             darken(@btn-primary-bg, 5%);
+@btn-primary-hover-color:        @btn-primary-color;
 
 @btn-success-color:              #fff;
 @btn-success-bg:                 @brand-success;
 @btn-success-border:             darken(@btn-success-bg, 5%);
+@btn-success-hover-color:        @btn-success-color;
 
 @btn-info-color:                 #fff;
 @btn-info-bg:                    @brand-info;
 @btn-info-border:                darken(@btn-info-bg, 5%);
+@btn-info-hover-color:           @btn-info-color;
 
 @btn-warning-color:              #fff;
 @btn-warning-bg:                 @brand-warning;
 @btn-warning-border:             darken(@btn-warning-bg, 5%);
+@btn-warning-hover-color:        @btn-warning-color;
 
 @btn-danger-color:               #fff;
 @btn-danger-bg:                  @brand-danger;
 @btn-danger-border:              darken(@btn-danger-bg, 5%);
+@btn-danger-hover-color:         @btn-danger-color;
+
+@btn-white-color:              #333;
+@btn-white-bg:                 #fff;
+@btn-white-border:             #ccc;
+@btn-white-hover-color:        @btn-white-color;
+
+@btn-primary-light-color:        #fff;
+@btn-primary-light-bg:           lighten(@brand-primary, 15%);
+@btn-primary-light-border:       darken(@btn-primary-light-bg, 5%);
+@btn-primary-light-hover-color:  @btn-primary-light-color;
+
+@btn-success-aqua-color:        #fff;
+@btn-success-aqua-bg:           #66cdaa;
+@btn-success-aqua-border:       darken(@btn-success-aqua-bg, 5%);
+@btn-success-aqua-hover-color:  @btn-success-aqua-color;
+
+@btn-lightgrey-color:        @brand-primary;
+@btn-lightgrey-bg:           #eeeeee;
+@btn-lightgrey-border:       #eeeeee;
+@btn-lightgrey-hover-color:  #ffffff;
 
 @btn-link-disabled-color:        @gray-light;
 
@@ -272,7 +298,7 @@
 // Note: These variables are not generated into the Customizer.
 
 @zindex-navbar:            1000;
-@zindex-dropdown:          1000;
+@zindex-dropdown:          1005;
 @zindex-popover:           1060;
 @zindex-tooltip:           1070;
 @zindex-navbar-fixed:      1030;
@@ -402,14 +428,14 @@
 
 //=== Inverted navbar
 // Reset inverted navbar basics
-@navbar-inverse-color:                      lighten(@gray-light, 15%);
-@navbar-inverse-bg:                         #222;
+@navbar-inverse-color:                      #fff;
+@navbar-inverse-bg:                         #3B3B41;
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
-@navbar-inverse-link-color:                 lighten(@gray-light, 15%);
+@navbar-inverse-link-color:                 #fff;
 @navbar-inverse-link-hover-color:           #fff;
-@navbar-inverse-link-hover-bg:              transparent;
+@navbar-inverse-link-hover-bg:              darken(@navbar-inverse-bg, 5%);
 @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
 @navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 10%);
 @navbar-inverse-link-disabled-color:        #444;
@@ -417,7 +443,7 @@
 
 // Inverted navbar brand label
 @navbar-inverse-brand-color:                @navbar-inverse-link-color;
-@navbar-inverse-brand-hover-color:          #fff;
+@navbar-inverse-brand-hover-color:          @navbar-inverse-link-hover-color;
 @navbar-inverse-brand-hover-bg:             transparent;
 
 // Inverted navbar toggle
@@ -530,7 +556,7 @@
 //##
 
 //** Tooltip max width
-@tooltip-max-width:           200px;
+@tooltip-max-width:           350px;
 //** Tooltip text color
 @tooltip-color:               #fff;
 //** Tooltip background color
@@ -747,6 +773,35 @@
 @panel-danger-text:           @state-danger-text;
 @panel-danger-border:         @state-danger-border;
 @panel-danger-heading-bg:     @state-danger-bg;
+
+// Primary Colour Panels
+// -------------------------
+@panel-red-text:              #fff;
+@panel-red-border:            #fa3031;
+@panel-red-heading-bg:        #fa3031;
+
+@panel-blue-text:             #fff;
+@panel-blue-border:           #1171a3;
+@panel-blue-heading-bg:       #1171a3;
+
+@panel-lightblue-text:        #fff;
+@panel-lightblue-border:      #52b9e9;
+@panel-lightblue-heading-bg:  #52b9e9;
+
+
+@panel-green-text:            #fff;
+@panel-green-border:          #43c83c;
+@panel-green-heading-bg:      #43c83c;
+
+
+@panel-orange-text:           #fff;
+@panel-orange-border:         #f88529;
+@panel-orange-heading-bg:     #f88529;
+
+
+@panel-violet-text:           #fff;
+@panel-violet-border:         #932ab6;
+@panel-violet-heading-bg:     #932ab6;
 
 
 //== Thumbnails
