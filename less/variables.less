@@ -118,7 +118,7 @@
 
 @btn-default-color:              #666;
 @btn-default-bg:                 #e9e9e9;
-@btn-default-border:             #333;
+@btn-default-border:             @btn-default-bg;
 @btn-default-hover-color:        @btn-default-color;
 
 @btn-primary-color:              #fff;
@@ -239,10 +239,17 @@
 @screen-lg-min:              @screen-lg;
 @screen-lg-desktop:          @screen-lg-min;
 
+// Extra Large screen / wide desktop
+// Note: Deprecated @screen-lg and @screen-lg-desktop as of v3.0.1
+@screen-xl:                  1400px;
+@screen-xl-min:              @screen-xl;
+@screen-xl-desktop:          @screen-xl-min;
+
 // So media queries don't overlap when required, provide a maximum
 @screen-xs-max:              (@screen-sm-min - 1);
 @screen-sm-max:              (@screen-md-min - 1);
 @screen-md-max:              (@screen-lg-min - 1);
+@screen-lg-max:              (@screen-xl-min - 1);
 
 
 // Grid system
@@ -639,3 +646,7 @@
 // Large screen / wide desktop
 @container-large-desktop:      ((1140px + @grid-gutter-width));
 @container-lg:                 @container-large-desktop;
+
+// Extra Large screen / wide desktop
+@container-extra-large-desktop:((1340px + @grid-gutter-width));
+@container-xl:                 @container-extra-large-desktop;
