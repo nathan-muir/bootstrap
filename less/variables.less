@@ -126,10 +126,20 @@
 @btn-primary-border:             darken(@btn-primary-bg, 5%);
 @btn-primary-hover-color:        @btn-primary-color;
 
+@btn-primary-light-color:        #fff;
+@btn-primary-light-bg:           lighten(@brand-primary, 15%);
+@btn-primary-light-border:       darken(@btn-primary-light-bg, 5%);
+@btn-primary-light-hover-color:  @btn-primary-light-color;
+
 @btn-success-color:              #fff;
 @btn-success-bg:                 @brand-success;
 @btn-success-border:             darken(@btn-success-bg, 5%);
 @btn-success-hover-color:        @btn-success-color;
+
+@btn-success-light-color:        #fff;
+@btn-success-light-bg:           lighten(@brand-success, 15%);
+@btn-success-light-border:       darken(@btn-success-light-bg, 5%);
+@btn-success-light-hover-color:  @btn-success-light-color;
 
 @btn-warning-color:              #fff;
 @btn-warning-bg:                 @brand-warning;
@@ -522,8 +532,8 @@
 @panel-default-heading-bg:    #f5f5f5;
 
 @panel-primary-text:          #fff;
-@panel-primary-border:        #52b9e9;
-@panel-primary-heading-bg:    #52b9e9;
+@panel-primary-border:        @brand-primary;
+@panel-primary-heading-bg:    @brand-primary;
 
 @panel-success-text:          @state-success-text;
 @panel-success-border:        @state-success-border;
