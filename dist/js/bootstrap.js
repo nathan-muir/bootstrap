@@ -1909,6 +1909,7 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     this.$window = $(window)
       .on('scroll.bs.affix.data-api', $.proxy(this.checkPosition, this))
       .on('click.bs.affix.data-api',  $.proxy(this.checkPositionWithEventLoop, this))
+      .on('refresh.bs.affix.data-api', $.proxy(this.refresh, this))
 
     this.$element = $(element)
     this.affixed  =
@@ -1956,6 +1957,11 @@ if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
     if (affix == 'bottom') {
       this.$element.offset({ top: document.body.offsetHeight - offsetBottom - this.$element.height() })
     }
+  }
+
+  Affix.prototype.refresh = function(){
+    this.affixed = this.unpin = null
+    this.checkPosition()
   }
 
 

@@ -2246,6 +2246,47 @@ fieldset[disabled] .btn-default.active {
   border-color: #cacaca;
 }
 
+.btn-white {
+  color: #333333;
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+
+.btn-white:hover,
+.btn-white:focus,
+.btn-white:active,
+.btn-white.active,
+.open .dropdown-toggle.btn-white {
+  color: #333333;
+  background-color: #ebebeb;
+  border-color: #adadad;
+}
+
+.btn-white:active,
+.btn-white.active,
+.open .dropdown-toggle.btn-white {
+  background-image: none;
+}
+
+.btn-white.disabled,
+.btn-white[disabled],
+fieldset[disabled] .btn-white,
+.btn-white.disabled:hover,
+.btn-white[disabled]:hover,
+fieldset[disabled] .btn-white:hover,
+.btn-white.disabled:focus,
+.btn-white[disabled]:focus,
+fieldset[disabled] .btn-white:focus,
+.btn-white.disabled:active,
+.btn-white[disabled]:active,
+fieldset[disabled] .btn-white:active,
+.btn-white.disabled.active,
+.btn-white[disabled].active,
+fieldset[disabled] .btn-white.active {
+  background-color: #ffffff;
+  border-color: #cccccc;
+}
+
 .btn-primary {
   color: #ffffff;
   background-color: #428bca;
@@ -2285,6 +2326,47 @@ fieldset[disabled] .btn-primary:active,
 fieldset[disabled] .btn-primary.active {
   background-color: #428bca;
   border-color: #357ebd;
+}
+
+.btn-primary-light {
+  color: #ffffff;
+  background-color: #7eb0db;
+  border-color: #6aa3d5;
+}
+
+.btn-primary-light:hover,
+.btn-primary-light:focus,
+.btn-primary-light:active,
+.btn-primary-light.active,
+.open .dropdown-toggle.btn-primary-light {
+  color: #ffffff;
+  background-color: #5e9cd2;
+  border-color: #3a86c8;
+}
+
+.btn-primary-light:active,
+.btn-primary-light.active,
+.open .dropdown-toggle.btn-primary-light {
+  background-image: none;
+}
+
+.btn-primary-light.disabled,
+.btn-primary-light[disabled],
+fieldset[disabled] .btn-primary-light,
+.btn-primary-light.disabled:hover,
+.btn-primary-light[disabled]:hover,
+fieldset[disabled] .btn-primary-light:hover,
+.btn-primary-light.disabled:focus,
+.btn-primary-light[disabled]:focus,
+fieldset[disabled] .btn-primary-light:focus,
+.btn-primary-light.disabled:active,
+.btn-primary-light[disabled]:active,
+fieldset[disabled] .btn-primary-light:active,
+.btn-primary-light.disabled.active,
+.btn-primary-light[disabled].active,
+fieldset[disabled] .btn-primary-light.active {
+  background-color: #7eb0db;
+  border-color: #6aa3d5;
 }
 
 .btn-warning {
@@ -2408,6 +2490,47 @@ fieldset[disabled] .btn-success:active,
 fieldset[disabled] .btn-success.active {
   background-color: #5cb85c;
   border-color: #4cae4c;
+}
+
+.btn-success-aqua {
+  color: #ffffff;
+  background-color: #66cdaa;
+  border-color: #53c79f;
+}
+
+.btn-success-aqua:hover,
+.btn-success-aqua:focus,
+.btn-success-aqua:active,
+.btn-success-aqua.active,
+.open .dropdown-toggle.btn-success-aqua {
+  color: #ffffff;
+  background-color: #47c399;
+  border-color: #36a680;
+}
+
+.btn-success-aqua:active,
+.btn-success-aqua.active,
+.open .dropdown-toggle.btn-success-aqua {
+  background-image: none;
+}
+
+.btn-success-aqua.disabled,
+.btn-success-aqua[disabled],
+fieldset[disabled] .btn-success-aqua,
+.btn-success-aqua.disabled:hover,
+.btn-success-aqua[disabled]:hover,
+fieldset[disabled] .btn-success-aqua:hover,
+.btn-success-aqua.disabled:focus,
+.btn-success-aqua[disabled]:focus,
+fieldset[disabled] .btn-success-aqua:focus,
+.btn-success-aqua.disabled:active,
+.btn-success-aqua[disabled]:active,
+fieldset[disabled] .btn-success-aqua:active,
+.btn-success-aqua.disabled.active,
+.btn-success-aqua[disabled].active,
+fieldset[disabled] .btn-success-aqua.active {
+  background-color: #66cdaa;
+  border-color: #53c79f;
 }
 
 .btn-info {
@@ -5672,21 +5795,21 @@ a.list-group-item:focus {
 }
 
 .panel-primary {
-  border-color: #52b9e9;
+  border-color: #428bca;
 }
 
 .panel-primary > .panel-heading {
   color: #ffffff;
-  background-color: #52b9e9;
-  border-color: #52b9e9;
+  background-color: #428bca;
+  border-color: #428bca;
 }
 
 .panel-primary > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #52b9e9;
+  border-top-color: #428bca;
 }
 
 .panel-primary > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #52b9e9;
+  border-bottom-color: #428bca;
 }
 
 .panel-success {
@@ -5964,19 +6087,10 @@ body.modal-open,
 }
 
 .modal.fade .modal-dialog {
-  -webkit-transform: translate(0, -25%);
-      -ms-transform: translate(0, -25%);
-          transform: translate(0, -25%);
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-     -moz-transition: -moz-transform 0.3s ease-out;
-       -o-transition: -o-transform 0.3s ease-out;
-          transition: transform 0.3s ease-out;
-}
-
-.modal.in .modal-dialog {
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
+  -webkit-transition: -webkit-transform 0.1s linear;
+     -moz-transition: -moz-transform 0.1s linear;
+       -o-transition: -o-transform 0.1s linear;
+          transition: transform 0.1s linear;
 }
 
 .modal-dialog {
