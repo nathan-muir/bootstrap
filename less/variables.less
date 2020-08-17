@@ -21,6 +21,7 @@
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
+@brand-muted:           #777;
 
 
 //== Scaffolding
@@ -175,6 +176,11 @@
 @btn-danger-bg:                  @brand-danger;
 @btn-danger-border:              darken(@btn-danger-bg, 5%);
 @btn-danger-hover-color:         @btn-danger-color;
+
+@btn-muted-color:                #fff;
+@btn-muted-bg:                   @brand-muted;
+@btn-muted-border:               darken(@btn-muted-bg, 5%);
+@btn-muted-hover-color:          @btn-muted-color;
 
 @btn-white-color:              #333;
 @btn-white-bg:                 #fff;
@@ -550,6 +556,10 @@
 @state-danger-bg:                #f2dede;
 @state-danger-border:            darken(spin(@state-danger-bg, -10), 5%);
 
+@state-muted-text:               @gray-light;
+@state-muted-bg:                 @gray;
+@state-muted-border:             darken(spin(@state-muted-bg, -10), 5%);
+
 
 //== Tooltips
 //
@@ -614,6 +624,8 @@
 @label-warning-bg:            @brand-warning;
 //** Danger label background color
 @label-danger-bg:             @brand-danger;
+//** Muted label background color
+@label-muted-bg:              @brand-muted;
 
 //** Default label text color
 @label-color:                 #fff;
@@ -678,6 +690,10 @@
 @alert-danger-text:           @state-danger-text;
 @alert-danger-border:         @state-danger-border;
 
+@alert-muted-bg:              @state-muted-bg;
+@alert-muted-text:            @state-muted-text;
+@alert-muted-border:          @state-muted-border;
+
 
 //== Progress bars
 //
@@ -698,6 +714,8 @@
 @progress-bar-warning-bg:     @brand-warning;
 //** Danger progress bar color
 @progress-bar-danger-bg:      @brand-danger;
+//** Muted progress bar color
+@progress-bar-muted-bg:       @brand-muted;
 //** Info progress bar color
 @progress-bar-info-bg:        @brand-info;
 
@@ -773,6 +791,10 @@
 @panel-danger-text:           @state-danger-text;
 @panel-danger-border:         @state-danger-border;
 @panel-danger-heading-bg:     @state-danger-bg;
+
+@panel-muted-text:            @state-muted-text;
+@panel-muted-border:          @state-muted-border;
+@panel-muted-heading-bg:      @state-muted-bg;
 
 // Primary Colour Panels
 // -------------------------
@@ -914,8 +936,6 @@
 
 //** Horizontal offset for forms and lists.
 @component-offset-horizontal: 180px;
-//** Text muted color
-@text-muted:                  @gray-light;
 //** Abbreviations and acronyms border color
 @abbr-border-color:           @gray-light;
 //** Headings small color

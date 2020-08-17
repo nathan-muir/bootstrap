@@ -101,9 +101,6 @@ mark,
 .text-capitalize     { text-transform: capitalize; }
 
 // Contextual colors
-.text-muted {
-  color: @text-muted;
-}
 .text-primary {
   .text-emphasis-variant(@brand-primary);
 }
@@ -118,6 +115,9 @@ mark,
 }
 .text-danger {
   .text-emphasis-variant(@state-danger-text);
+}
+.text-muted {
+  .text-emphasis-variant(@state-muted-text);
 }
 
 // Contextual backgrounds
