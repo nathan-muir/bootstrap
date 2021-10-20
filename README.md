@@ -1,15 +1,8 @@
-# [Bootstrap](https://getbootstrap.com/)
-
-[![Slack](https://bootstrap-slack.herokuapp.com/badge.svg)](https://bootstrap-slack.herokuapp.com/)
-![Bower version](https://img.shields.io/bower/v/bootstrap.svg)
-[![npm version](https://img.shields.io/npm/v/bootstrap.svg)](https://www.npmjs.com/package/bootstrap)
-[![Build Status](https://img.shields.io/travis/twbs/bootstrap/master.svg)](https://travis-ci.org/twbs/bootstrap)
-[![devDependency Status](https://img.shields.io/david/dev/twbs/bootstrap.svg)](https://david-dm.org/twbs/bootstrap#info=devDependencies)
-[![NuGet](https://img.shields.io/nuget/v/bootstrap.svg)](https://www.nuget.org/packages/Bootstrap)
+# Bootstrap 3.4.1 - [3 Stack Fork](https://github.com/3stack-software/bootstrap)
 
 Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thornton](https://twitter.com/fat), and maintained by the [core team](https://github.com/orgs/twbs/people) with the massive support and involvement of the community.
 
-To get started, check out <https://getbootstrap.com/>!
+To get started, check out <https://getbootstrap.com/docs/3.4/>!
 
 
 ## Table of contents
@@ -29,12 +22,11 @@ To get started, check out <https://getbootstrap.com/>!
 
 Several quick start options are available:
 
-* [Download the latest release](https://github.com/twbs/bootstrap/archive/v3.4.1.zip).
-* Clone the repo: `git clone https://github.com/twbs/bootstrap.git`.
-* Install with [Bower](https://bower.io/): `bower install bootstrap`.
-* Install with [npm](https://www.npmjs.com/): `npm install bootstrap@3`.
-* Install with [Meteor](https://www.meteor.com/): `meteor add twbs:bootstrap`.
-* Install with [Composer](https://getcomposer.org/): `composer require twbs/bootstrap`.
+* Clone the repo: `git clone git@github.com:3stack-software/bootstrap.git`.
+* Install Grunt CLI: `npm install -g grunt-cli` 
+* Install Grunt: `npm install grunt`
+* Run tests: `grunt tests`
+* Compile to dist: `grunt dist`
 
 Read the [Getting started page](https://getbootstrap.com/docs/3.4/getting-started/) for information on the framework contents, templates and examples, and more.
 
