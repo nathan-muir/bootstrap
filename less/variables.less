@@ -16,13 +16,15 @@
 @gray-light:             lighten(@gray-base, 46.7%); // #777
 @gray-lighter:           lighten(@gray-base, 93.5%); // #eee
 
-@brand-primary:         darken(#428bca, 6.5%); // #337ab7
-@brand-success:         #5cb85c;
-@brand-info:            #5bc0de;
+@brand-logo-blue:       #082756;
+@brand-logo-red:        #D21918;
+@brand-primary:         #006a9a;
+@brand-success:         #79c153;
+@brand-info:            #009fc1;
 @brand-warning:         #f0ad4e;
 @brand-danger:          #d9534f;
 @brand-muted:           #777;
-
+@brand-light-blue:      #428bca;
 
 //== Scaffolding
 //
@@ -45,13 +47,13 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-@font-family-sans-serif:  "Open Sans", Helvetica, Arial, sans-serif;
+@font-family-sans-serif:  "Karla", Arial, Helvetica, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          14px;
+@font-size-base:          15px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * .85)); // ~12px
 
@@ -68,8 +70,8 @@
 @line-height-computed:    floor((@font-size-base * @line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
-@headings-font-family:    inherit;
-@headings-font-weight:    600;
+@headings-font-family:   "Geomanist", Arial, Helvetica, sans-serif;
+@headings-font-weight:    500;
 @headings-line-height:    1.1;
 @headings-color:          inherit;
 
@@ -105,9 +107,12 @@
 @line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 @line-height-small:         1.5;
 
-@border-radius-base:        4px;
-@border-radius-large:       6px;
-@border-radius-small:       3px;
+@border-radius-base:        2px;
+@border-radius-large:       4px;
+@border-radius-small:       2px;
+@round-border-radius-base:  16px;
+@round-border-radius-large: 30px;
+@round-border-radius-small: 15px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 @component-active-color:    #fff;
@@ -154,32 +159,32 @@
 
 @btn-primary-color:              #fff;
 @btn-primary-bg:                 @brand-primary;
-@btn-primary-border:             darken(@btn-primary-bg, 5%);
+@btn-primary-border:             @brand-primary;
 @btn-primary-hover-color:        @btn-primary-color;
 
 @btn-success-color:              #fff;
 @btn-success-bg:                 @brand-success;
-@btn-success-border:             darken(@btn-success-bg, 5%);
+@btn-success-border:             @brand-success;
 @btn-success-hover-color:        @btn-success-color;
 
 @btn-info-color:                 #fff;
 @btn-info-bg:                    @brand-info;
-@btn-info-border:                darken(@btn-info-bg, 5%);
+@btn-info-border:                @brand-info;
 @btn-info-hover-color:           @btn-info-color;
 
 @btn-warning-color:              #fff;
 @btn-warning-bg:                 @brand-warning;
-@btn-warning-border:             darken(@btn-warning-bg, 5%);
+@btn-warning-border:             @brand-warning;
 @btn-warning-hover-color:        @btn-warning-color;
 
 @btn-danger-color:               #fff;
 @btn-danger-bg:                  @brand-danger;
-@btn-danger-border:              darken(@btn-danger-bg, 5%);
+@btn-danger-border:              @brand-danger;
 @btn-danger-hover-color:         @btn-danger-color;
 
 @btn-muted-color:                #fff;
 @btn-muted-bg:                   @brand-muted;
-@btn-muted-border:               darken(@btn-muted-bg, 5%);
+@btn-muted-border:               @brand-muted;
 @btn-muted-hover-color:          @btn-muted-color;
 
 @btn-white-color:              #333;
@@ -189,15 +194,15 @@
 
 @btn-primary-light-color:        #fff;
 @btn-primary-light-bg:           lighten(@brand-primary, 15%);
-@btn-primary-light-border:       darken(@btn-primary-light-bg, 5%);
+@btn-primary-light-border:       lighten(@brand-primary, 15%);
 @btn-primary-light-hover-color:  @btn-primary-light-color;
 
 @btn-success-aqua-color:        #fff;
 @btn-success-aqua-bg:           #66cdaa;
-@btn-success-aqua-border:       darken(@btn-success-aqua-bg, 5%);
+@btn-success-aqua-border:       #66cdaa;
 @btn-success-aqua-hover-color:  @btn-success-aqua-color;
 
-@btn-lightgrey-color:        @brand-primary;
+@btn-lightgrey-color:        #337ab7;
 @btn-lightgrey-bg:           #eee;
 @btn-lightgrey-border:       #eee;
 @btn-lightgrey-hover-color:  #fff;
@@ -205,9 +210,9 @@
 @btn-link-disabled-color:        @gray-light;
 
 // Allows for customizing button radius independently from global border radius
-@btn-border-radius-base:         @border-radius-base;
-@btn-border-radius-large:        @border-radius-large;
-@btn-border-radius-small:        @border-radius-small;
+@btn-border-radius-base:         @round-border-radius-base;
+@btn-border-radius-large:        @round-border-radius-large;
+@btn-border-radius-small:        @round-border-radius-small;
 
 
 //== Forms
@@ -268,7 +273,7 @@
 //** Background for the dropdown menu.
 @dropdown-bg:                    #fff;
 //** Dropdown menu `border-color`.
-@dropdown-border:                rgba(0, 0, 0, .15);
+@dropdown-border:                transparent;
 //** Dropdown menu `border-color` **for IE8**.
 @dropdown-fallback-border:       #ccc;
 //** Divider color for between dropdown items.
@@ -403,14 +408,14 @@
 // Basics of a navbar
 @navbar-height:                    50px;
 @navbar-margin-bottom:             @line-height-computed;
-@navbar-border-radius:             @border-radius-base;
+@navbar-border-radius:             30px;
 @navbar-padding-horizontal:        floor((@grid-gutter-width / 2));
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       340px;
 
 @navbar-default-color:             #777;
 @navbar-default-bg:                #f8f8f8;
-@navbar-default-border:            darken(@navbar-default-bg, 6.5%);
+@navbar-default-border:            transparent;
 
 // Navbar links
 @navbar-default-link-color:                #777;
@@ -435,15 +440,15 @@
 //=== Inverted navbar
 // Reset inverted navbar basics
 @navbar-inverse-color:                      #fff;
-@navbar-inverse-bg:                         #3b3b41;
+@navbar-inverse-bg:                         @brand-logo-blue;
 @navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
 
 // Inverted navbar links
 @navbar-inverse-link-color:                 #fff;
 @navbar-inverse-link-hover-color:           #fff;
-@navbar-inverse-link-hover-bg:              darken(@navbar-inverse-bg, 5%);
+@navbar-inverse-link-hover-bg:              #26406a;
 @navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
-@navbar-inverse-link-active-bg:             darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-link-active-bg:             @navbar-inverse-link-hover-bg;
 @navbar-inverse-link-disabled-color:        #444;
 @navbar-inverse-link-disabled-bg:           transparent;
 
@@ -453,9 +458,9 @@
 @navbar-inverse-brand-hover-bg:             transparent;
 
 // Inverted navbar toggle
-@navbar-inverse-toggle-hover-bg:            #333;
+@navbar-inverse-toggle-hover-bg:            @navbar-inverse-link-hover-bg;
 @navbar-inverse-toggle-icon-bar-bg:         #fff;
-@navbar-inverse-toggle-border-color:        #333;
+@navbar-inverse-toggle-border-color:        @navbar-inverse-link-hover-bg;
 
 
 //== Navs
@@ -803,8 +808,8 @@
 @panel-red-heading-bg:        #fa3031;
 
 @panel-blue-text:             #fff;
-@panel-blue-border:           #1171a3;
-@panel-blue-heading-bg:       #1171a3;
+@panel-blue-border:           #082756;
+@panel-blue-heading-bg:       #082756;
 
 @panel-lightblue-text:        #fff;
 @panel-lightblue-border:      #52b9e9;
@@ -812,8 +817,8 @@
 
 
 @panel-green-text:            #fff;
-@panel-green-border:          #43c83c;
-@panel-green-heading-bg:      #43c83c;
+@panel-green-border:          #79c153;
+@panel-green-heading-bg:      #79c153;
 
 
 @panel-orange-text:           #fff;
@@ -822,8 +827,8 @@
 
 
 @panel-violet-text:           #fff;
-@panel-violet-border:         #932ab6;
-@panel-violet-heading-bg:     #932ab6;
+@panel-violet-border:         #a370b1;
+@panel-violet-heading-bg:     #a370b1;
 
 
 //== Thumbnails
@@ -850,7 +855,7 @@
 //##
 
 @well-bg:                     #f5f5f5;
-@well-border:                 darken(@well-bg, 7%);
+@well-border:                 transparent;
 
 
 //== Badges
