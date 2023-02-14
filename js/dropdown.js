@@ -41,6 +41,17 @@
       var $this         = $(this)
       var $parent       = getParent($this)
       var relatedTarget = { relatedTarget: this }
+      var autoClose = $this.attr('data-auto-close')
+
+      if (e && e.type == 'click') {
+        var isMenuTarget = $.contains($parent[0], e.target);
+        if (
+          (autoClose === 'inside' && !isMenuTarget) ||
+          (autoClose === 'outside' && isMenuTarget)
+        ) {
+          return
+        }
+      }
 
       if (!$parent.hasClass('open')) return
 
